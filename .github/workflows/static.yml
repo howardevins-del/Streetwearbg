@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>All Black Children Enterprise - Streetwear</title>
+<style>
+:root{
+  --bg:#0b0b0b;
+  --text:#f5f5f5;
+  --gold:#d4af37;
+  --blue:#3b82f6;
+  --muted:#9aa0a6;
+}
+*{box-sizing:border-box;}
+body{
+  margin:0;
+  font-family:'Poppins', sans-serif;
+  background:var(--bg);
+  color:var(--text);
+}
+h1,h2,h3{margin:0;}
+/* Homepage */
+.home-body{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+  text-align:center;
+  background:var(--bg);
+}
+.home-body h1{
+  font-size:60px;
+  color:var(--gold);
+  text-shadow:0 0 15px rgba(212,175,55,.7);
+  margin-bottom:30px;
+}
+.home-body a{
+  padding:18px 32px;
+  background:linear-gradient(180deg,var(--gold),var(--blue));
+  color:#0b0b0b;
+  text-decoration:none;
+  font-weight:bold;
+  border-radius:16px;
+  font-size:18px;
+  box-shadow:0 8px 20px rgba(212,175,55,.5);
+  transition:0.3s;
+}
+.home-body a:hover{
+  background:var(--muted);
+  color:#000;
+  transform:translateY(-2px);
+}
+/* Product page */
+.wrap{
+  max-width:1000px;
+  margin:0 auto;
+  padding:24px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:28px;
+}
+@media(max-width:900px){.wrap{grid-template-columns:1fr;}}
+.media{
+  background:linear-gradient(180deg,#111,#0f0f0f);
+  border-radius:18px;
+  padding:18px;
+  text-align:center;
+  box-shadow:0 20px 80px rgba(212,175,55,.4);
+}
+.media img{
+  width:100%;
+  border-radius:14px;
+  box-shadow:0 8px 20px rgba(0,0,0,.5);
+  margin-bottom:12px;
+}
+.card{
+  background:linear-gradient(180deg,#111,#0f0f0f);
+  border-radius:22px;
+  padding:28px;
+  box-shadow:0 20px 80px rgba(212,175,55,.3);
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+}
+.badge{
+  align-self:flex-start;
+  background:#0b0b0b;
+  border:2px solid var(--gold);
+  color:var(--gold);
+  padding:6px 12px;
+  border-radius:999px;
+  font-size:12px;
+  font-weight:600;
+  letter-spacing:1px;
+}
+h1{font-size:28px;color:var(--gold);}
+.price{font-size:28px;font-weight:700;color:var(--text);}
+.price span{color:var(--muted);font-size:14px;margin-left:6px;}
+.desc{color:#d1d5db;line-height:1.6;}
+.opts{
+  display:flex;
+  gap:12px;
+  margin-top:12px;
+}
+.opt{
+  padding:12px;
+  border-radius:12px;
+  background:#0c0c0c;
+  border:2px solid #222;
+  text-align:center;
+  cursor:pointer;
+  font-weight:600;
+  transition:0.3s;
+}
+.opt.active{
+  border-color:var(--blue);
+  box-shadow:0 0 8px var(--blue) inset;
+}
+.actions{
+  display:flex;
+  gap:12px;
+  margin-top:16px;
+  flex-wrap:wrap;
+}
+.buy{
+  flex:1;
+  padding:16px;
+  border-radius:16px;
+  border:0;
+  font-weight:700;
+  letter-spacing:1px;
+  background:linear-gradient(180deg,var(--gold),var(--blue));
+  color:#0b0b0b;
+  cursor:pointer;
+  transition:0.3s;
+}
+.buy:hover{transform:translateY(-2px);}
+.cart{
+  flex:1;
+  padding:16px;
+  border-radius:16px;
+  border:2px solid var(--gold);
+  background:#0b0b0b;
+  color:#f5f5f5;
+  cursor:pointer;
+  font-weight:700;
+  letter-spacing:1px;
+  transition:0.3s;
+}
+.cart:hover{transform:translateY(-2px);border-color:var(--blue);}
+.contact-card{
+  background:linear-gradient(180deg,#111,#0f0f0f);
+  border-radius:22px;
+  padding:28px;
+  box-shadow:0 20px 80px rgba(212,175,55,.3);
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+  margin-top:40px;
+}
+.contact-card input, .contact-card textarea{
+  width:100%;
+  padding:12px;
+  border-radius:12px;
+  border:2px solid #222;
+  background:#0c0c0c;
+  color:#f5f5f5;
+  margin-bottom:12px;
+}
+.contact-card button{
+  padding:14px;
+  border-radius:16px;
+  border:0;
+  background:linear-gradient(180deg,var(--gold),var(--blue));
+  color:#0b0b0b;
+  font-weight:700;
+  cursor:pointer;
+}
+footer{
+  opacity:.8;
+  text-align:center;
+  padding:22px;
+  font-weight:600;
+  letter-spacing:1px;
+}
+</style>
+</head>
+<body>
+
+<!-- HOME PAGE -->
+<div class="home-body">
+  <h1>All Black Children Enterprise</h1>
+  <a href="#product">Enter</a>
+</div>
+
+<!-- PRODUCT PAGE -->
+<div class="wrap" id="product">
+  <!-- MEDIA -->
+  <section class="media">
+    <img id="hero" src="https://res.cloudinary.com/dlsldp1eb/image/upload/v1768838137/20260119_095342_fc1o7z.jpg" alt="All-black varsity jacket" />
+  </section>
+
+  <!-- INFO -->
+  <section class="card">
+    <span class="badge">Limited Drop</span>
+    <h1>All-Black Varsity Jacket & Bandana Joggers Set</h1>
+    <div class="price">$40 <span>Free US shipping</span></div>
+    <p class="desc">All-black varsity jacket paired with matching bandana joggers. Heavyweight streetwear fit inspired by West Coast classics. Clean, bold, and built for everyday wear.</p>
+
+    <strong>Select Size</strong>
+    <div class="opts" id="sizes">
+      <div class="opt active">S</div>
+      <div class="opt">M</div>
+      <div class="opt">L</div>
+      <div class="opt">XL</div>
+    </div>
+
+    <div class="actions">
+      <button class="buy" onclick="window.location.href='https://cash.app/$trillbilldfw'">Buy Now with Cash App</button>
+      <button class="cart" onclick="alert('Please pay via Cash App $trillbilldfw')">Add to Cart</button>
+    </div>
+  </section>
+
+  <!-- CONTACT FORM -->
+  <section class="contact-card">
+    <h2>Contact Us</h2>
+    <p>Send us a message and we'll reply on Instagram <strong>@abctrillbill</strong></p>
+    <form onsubmit="openInstagramDM(); return false;">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+</div>
+
+<footer>© 2026 All Black Children Enterprise. All rights reserved.</footer>
+
+<script>
+// Size selection
+document.querySelectorAll('#sizes .opt').forEach(o=>{
+  o.addEventListener('click', ()=>{
+    document.querySelectorAll('#sizes .opt').forEach(x=>x.classList.remove('active'));
+    o.classList.add('active');
+  });
+});
+
+// Contact form opens Instagram DM
+function openInstagramDM(){
+  alert('You will be redirected to Instagram to send a message.');
+  window.open('https://instagram.com/direct/new/?username=abctrillbill','_blank');
+}
+</script>
+
+</body>
+</html>
